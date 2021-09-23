@@ -23,15 +23,15 @@ android:layout_marginVertical="10dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginVertical="10dp"
-        android:text="Your gender is" />
+        android:text="Your age is" />
 
     <EditText
 android:layout_width="match_parent"
 android:layout_height="wrap_content"
-android:id="@+id/gender"
+android:id="@+id/age"
 android:layout_marginHorizontal="30dp"
 android:padding="10dp"
-android:inputType="text"
+android:inputType="numberDecimal"
 android:background="@drawable/edit_bg"
     />
 <TextView
@@ -100,7 +100,7 @@ android:layout_width="wrap_content"
 android:layout_height="wrap_content"
 android:textAlignment="center"
     android:gravity="center_horizontal"
-android:textSize="50sp"
+android:textSize="40sp"
     />
 
     </LinearLayout>

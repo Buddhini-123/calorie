@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText height;
     EditText weight;
+    EditText age;
     Button btn;
     TextView result;
     String calculation;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         height = findViewById(R.id.height);
         weight = findViewById(R.id.weight);
+        age = findViewById(R.id.age);
         btn = findViewById(R.id.btn);
         result = findViewById(R.id.result);
     }
@@ -33,14 +35,16 @@ public class MainActivity extends AppCompatActivity {
         public void calculateCalorie (View view){
             String W = weight.getText().toString();
             String H = height.getText().toString();
+            String A = age.getText().toString();
 
             float weightValue = Float.parseFloat(W);
-            float heightValue = Float.parseFloat(H) / 100;
+            float heightValue = Float.parseFloat(H);
+            float ageValue = Float.parseFloat(A);
 
+            //float calorie = weightValue / (heightValue * heightValue);
+            float calorie = (float) (((10 * weightValue) + (6.25 * heightValue) - (5 * ageValue)  - 161) * 1.2);
 
-            float calorie = weightValue / (heightValue * heightValue);
-
-            calculation =  "Result:\n\n " + calorie + "\n" + result;
+            calculation =  "Result:\n\n " + calorie + "\n" + "calories";
 
             result.setText(calculation);
 
